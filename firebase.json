@@ -9,6 +9,7 @@
   },
   "hosting": {
     "public": "dist/my-portfolio/browser",
+    "sites":"sumanthnagireddi1",
     "ignore": [
       "firebase.json",
       "**/.*",
