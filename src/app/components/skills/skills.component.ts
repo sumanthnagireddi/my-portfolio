@@ -1,55 +1,21 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { PortfolioService } from '../../services/portfolio.service';
+import { NgFor } from '@angular/common';
 
 @Component({
   selector: 'app-skills',
   templateUrl: './skills.component.html',
-  styleUrls: ['./skills.component.css'], standalone:true
+  styleUrls: ['./skills.component.css'], standalone:true,imports:[NgFor]
 })
 export class SkillsComponent {
-   skills:any=[
-    {
-      name:'Javascript',
-      logo:'assets/js.png'
-    },
-    {
-      name:'Typescript',
-      logo:'assets/ts.png'
-    },
-    {
-      name:'Tailwind css',
-      logo:'assets/tailwind.png'
-    },
-    {
-      name:'Angular',
-      logo:'assets/angular.png'
-    },
-    {
-      name:'Angular Material',
-      logo:'assets/material.png'
-    },
-    {
-      name:'Prime NG',
-      logo:'assets/primeng.png'
-    },
-    {
-      name:'React',
-      logo:'assets/react.png'
-    },
-    {
-      name:'Node JS',
-      logo:'assets/node.png'
-    },
-    {
-      name:'Mongo db',
-      logo:'assets/mongo.png'
-    },
-    {
-      name:'Express JS',
-      logo:'assets/express.png'
-    },
-    {
-      name:'Git',
-      logo:'assets/git.png'
-    },
-  ]
+  
+  portfolioService=inject(PortfolioService);
+  skills:any=[]
+  ngOnInit(){
+    // this.portfolioService.addExperiences()
+    this.portfolioService.getSkills().subscribe(data=>{
+      console.log(data)
+      this.skills = data
+    })
+  }
 }

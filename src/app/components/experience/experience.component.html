@@ -9,43 +9,28 @@
             <p class="text-normal text-lg md:text-xl max-w-xl text-center">Here is a quick summary of my most recent
                 experiences:</p>
         </div>
-        <div
+        <div *ngFor="let item of experiences"
             class="rounded-xl bg-gray card dark:bg-gray-100 dark:shadow-2xl mx-auto flex w-full max-w-4xl flex-col justify-between gap-4 p-8 md:flex-row md:gap-8">
             <div class="max-md:order-1 md:w-1/4"><img alt="Upwork logo" loading="lazy" width="102" height="28"
                     decoding="async" data-nimg="1" class="max-w-[120px]"
-src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Infosys_logo.svg/600px-Infosys_logo.svg.png"                    style="color: transparent;"></div>
+                    src="{{item?.companyLogo}}" 
+                    style="color: transparent;"></div>
             <div class="flex flex-col gap-4 max-md:order-3 md:w-2/4">
-                <p class="text-lg md:text-xl font-semibold text-gray-900">Web Developer</p>
+                <p class="text-lg md:text-xl font-semibold text-gray-900">{{item?.companyName}} - {{item?.role}}</p>
                 <ul class="flex list-disc flex-col gap-2 md:gap-1">
                     <li class="text-normal text-base">Worked for various projects.
                     </li>
-                    <li class="text-normal text-base">Worked with a variety of technologies, including Angular,Javascript,
+                    <li class="text-normal text-base">Worked with a variety of technologies, including
+                        Angular,Javascript,
                         Typescript, Node JS, Tailwindcss, Primeng, Jest,and others.
                     </li>
                 </ul>
             </div>
             <div class="max-md:order-2 md:w-1/4">
-                <p class="text-base text-gray-700 md:text-right">Nov 2021<!-- --> <!-- -->-<!-- --> <!-- -->June 2024</p>
+                <p class="text-base text-gray-700 md:text-right">{{item?.from}} <!-- --> <!-- -->-<!-- --> <!-- -->{{item?.to}} 
+                </p>
             </div>
         </div>
-        <div
-        class="rounded-xl bg-gray card dark:bg-gray-100 dark:shadow-2xl mx-auto flex w-full max-w-4xl flex-col justify-between gap-4 p-8 md:flex-row md:gap-8">
-        <div class="max-md:order-1 md:w-1/4"><img alt="Upwork logo" loading="lazy" width="102" height="28"
-                decoding="async" data-nimg="1" class="max-w-[120px]"
-src="data:image/png;base64,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"                    style="color: transparent;"></div>
-        <div class="flex flex-col gap-4 max-md:order-3 md:w-2/4">
-            <p class="text-lg md:text-xl font-semibold text-gray-900">Web Developer</p>
-            <ul class="flex list-disc flex-col gap-2 md:gap-1">
-                <li class="text-normal text-base">Worked for various projects.
-                </li>
-                <li class="text-normal text-base">Worked with a variety of technologies, including Angular,Javascript,
-                    Typescript, Node JS, Tailwindcss, Primeng, Jest,and others.
-                </li>
-            </ul>
-        </div>
-        <div class="max-md:order-2 md:w-1/4">
-            <p class="text-base text-gray-700 md:text-right">Nov 2021<!-- --> <!-- -->-<!-- --> <!-- -->June 2024</p>
-        </div>
-    </div>
+       
     </div>
 </section>
