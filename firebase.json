@@ -1,0 +1,24 @@
+{
+    "database":{
+        "rules":{
+            "rules":{
+                ".read":true,
+                ".write":false
+            }
+        }
+    },
+    "hosting": {
+        "rewrites":[
+            {
+                "source": "**",
+                "destination": "/index.html"
+            }
+        ],
+        "public": "dist/my-portfolio/browser",
+        "ignore": [
+          "firebase.json",
+          "**/.*",
+          "**/node_modules/**"
+        ]
+      }
+}
