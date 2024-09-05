@@ -24,15 +24,13 @@ export const appConfig: ApplicationConfig = {
     provideRouter(routes),
     provideFirebaseApp(() =>
       initializeApp({
-        projectId: 'sumanth-article-publishing',
-        appId: '1:706459179395:web:3d9fdd4f34d739e290feb6',
-        databaseURL:
-          'https://sumanth-article-publishing-default-rtdb.asia-southeast1.firebasedatabase.app',
-        storageBucket: 'sumanth-article-publishing.appspot.com',
-        apiKey: 'AIzaSyC6mKMzf-iC-Y6Xbhrmlt_2Mb1V8_QTuLA',
-        authDomain: 'sumanth-article-publishing.firebaseapp.com',
-        messagingSenderId: '706459179395',
-        measurementId: 'G-4Q37YPCB9T',
+        apiKey: 'AIzaSyBmj0OCb24e7stqrxqldcoodGnIFZkP-1M',
+        authDomain: 'my-portfolio-fb7d7.firebaseapp.com',
+        projectId: 'my-portfolio-fb7d7',
+        storageBucket: 'my-portfolio-fb7d7.appspot.com',
+        messagingSenderId: '832549293439',
+        appId: '1:832549293439:web:62f969174df2e8bb509e4a',
+        measurementId: 'G-8LXJE7KEFZ',
       })
     ),
     provideAuth(() => getAuth()),
