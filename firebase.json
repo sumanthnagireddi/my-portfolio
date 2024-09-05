@@ -8,7 +8,6 @@
     }
   },
   "hosting": {
-    "site": "sumanthnagireddi1",
     "public": "dist/my-portfolio/browser",
     "ignore": [
       "firebase.json",

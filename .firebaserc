@@ -1,5 +1,9 @@
 {
   "projects": {
-    "default": "sumanth-article-publishing"
-  }
+    "default": "my-portfolio-fb7d7",
+    "portfolio": "my-portfolio-fb7d7"
+  },
+  "targets": {},
+  "etags": {},
+  "dataconnectEmulatorConfig": {}
 }
