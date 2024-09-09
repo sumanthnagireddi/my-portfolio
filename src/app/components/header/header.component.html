@@ -107,14 +107,13 @@
                         d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
                 </svg>
             </button>
-            <button *ngIf="openMenu" (click)="toggleMenu()" type="button"
-            class="-m-2.5 rounded-md p-2.5 text-gray-700">
-            <span class="sr-only">Close menu</span>
-            <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
-                aria-hidden="true">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
-            </svg>
-        </button>
+            <button *ngIf="openMenu" (click)="toggleMenu()" type="button" class="-m-2.5 rounded-md p-2.5 text-gray-700">
+                <span class="sr-only">Close menu</span>
+                <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                    aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+            </button>
         </div>
         <div class="hidden sm:flex sm:gap-x-12">
             <div class="relative">
@@ -125,6 +124,12 @@
             </div>
 
             <a href="#" class="text-sm font-semibold leading-6 text-gray-900">Work</a>
+            <a href="#" class="text-sm font-semibold leading-6 text-gray-900">Blog</a>
+            <a href="#" class="text-sm font-semibold leading-6 text-gray-900">Interview Q&A</a> 
+            <a href="#"
+                class="text-sm font-semibold leading-6 text-gray-900">Resources</a>
+
+
             <a href="#" class="text-sm font-semibold leading-6 text-gray-900">Contact</a>
             <a href="#" class="text-sm font-semibold leading-6 text-gray-900">Projects</a>
         </div>
@@ -134,12 +139,18 @@
                 CV</button>
 
         </div>
-        <div class="mt-6 sm:hidden flow-root absolute p-4 px-8 bg-white h-[300px] w-full top-10 z-10 right-0" *ngIf="openMenu">
+        <div class="mt-6 sm:hidden flow-root absolute p-4 px-8 bg-white h-[300px] w-full top-10 z-10 right-0"
+            *ngIf="openMenu">
             <div class="-my-6 divide-y divide-gray-500/10">
                 <div class=" py-4 flex flex-col gap-2">
-                    
-                    <a href="#" class="text-sm font-semibold leading-6 text-gray-900">About</a>
+
                     <a href="#" class="text-sm font-semibold leading-6 text-gray-900">Work</a>
+                    <a href="#" class="text-sm font-semibold leading-6 text-gray-900">Blog</a>
+                    <a href="#" class="text-sm font-semibold leading-6 text-gray-900">Interview Q&A</a> 
+                    <a href="#"
+                        class="text-sm font-semibold leading-6 text-gray-900">Resources</a>
+        
+        
                     <a href="#" class="text-sm font-semibold leading-6 text-gray-900">Contact</a>
                     <a href="#" class="text-sm font-semibold leading-6 text-gray-900">Projects</a>
                 </div>

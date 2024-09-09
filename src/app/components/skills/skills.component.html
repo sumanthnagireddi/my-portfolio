@@ -9,10 +9,11 @@
             <p class="text-normal text-lg md:text-xl max-w-xl text-center">The skills, tools and technologies I am really good at:</p>
         </div>
         <div class="grid grid-cols-3 ml-2 md:ml-0 gap-y-4 md:grid-cols-6 md:gap-y-8 lg:grid-cols-8 lg:gap-y-12">
-            <div *ngFor="let item of skills">
-                <img class="w-[60px] h-[60px] mb-2 flex justify-center" [src]="item.logo">
-                <p class="font-medium text-start text-base md:text-lg">{{item.name}}</p>
+            <div *ngFor="let item of skills" class="flex flex-col items-center gap-2">
+                <img class="w-[60px] h-[60px] mb-2 rounded-md" [src]="item.logo" alt="{{item.name}}">
+                <p class="font-medium text-center text-base md:text-lg">{{item.name}}</p>
             </div>
+            
         </div>
     </div>
 </section>
