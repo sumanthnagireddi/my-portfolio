@@ -17,4 +17,9 @@ import { HeaderComponent } from "./components/header/header.component";
 })
 export class AppComponent {
   title = 'my-portfolio';
+  currentYear:any;
+  ngOnInit(){
+    let date=new Date();
+    this.currentYear=date.getFullYear();
+  }
 }
