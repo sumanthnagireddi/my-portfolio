@@ -141,16 +141,14 @@
         </div>
         <div class="mt-6 sm:hidden flow-root absolute p-4 px-8 bg-white h-[300px] w-full top-10 z-10 right-0"
             *ngIf="openMenu">
-            <div class="-my-6 divide-y divide-gray-500/10">
+            <div (click)="openMenu = false" class="-my-6 divide-y divide-gray-500/10">
                 <div class=" py-4 flex flex-col gap-2">
 
                     <a href="#" class="text-sm font-semibold leading-6 text-gray-900">Work</a>
-                    <a href="#" class="text-sm font-semibold leading-6 text-gray-900">Blog</a>
-                    <a href="#" class="text-sm font-semibold leading-6 text-gray-900">Interview Q&A</a> 
-                    <a href="#"
+                    <a routerLink="blog" class="text-sm font-semibold leading-6 text-gray-900">Blog</a>
+                    <a routerLink="interview-questions-answers" class="text-sm font-semibold leading-6 text-gray-900">Interview Q&A</a> 
+                    <a routerLink="resources"
                         class="text-sm font-semibold leading-6 text-gray-900">Resources</a>
-        
-        
                     <a href="#" class="text-sm font-semibold leading-6 text-gray-900">Contact</a>
                     <a href="#" class="text-sm font-semibold leading-6 text-gray-900">Projects</a>
                 </div>
