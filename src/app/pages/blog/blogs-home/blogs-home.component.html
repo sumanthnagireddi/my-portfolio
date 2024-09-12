@@ -1,4 +1,4 @@
-<div class="py-4">
+<div class="py-4 px-4 ">
     <header class="bg-white">
         <div class="mx-auto max-w-screen-xl pt-2 pb-6">
             <div class="flex  items-center gap-4 ">
@@ -22,7 +22,7 @@
                     Post</button>
             </div>
         </div>
-        <div class="grid grid-cols-3 gap-6 my-4">
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 my-4">
             <ng-container *ngFor="let blog of blogs; let i = index">
                 <div *ngIf="i === 0" class="col-span-2">
                     <app-blog-card [data]="blog"></app-blog-card>
@@ -36,7 +36,7 @@
 </div>
 <h2 class="font-medium text-lg">All blog posts</h2>
 <div>
-    <div class="grid grid-cols-3 h-full gap-6 my-4">
+    <div class="grid grid-cols-1 lg:grid-cols-3 h-full gap-6 my-4">
         <div *ngFor="let item of blogs">
             <app-blog-card [data]="item" />
         </div>
