@@ -1,5 +1,5 @@
 import { ApplicationConfig, provideZoneChangeDetection } from '@angular/core';
-import { provideRouter } from '@angular/router';
+import { provideRouter, withComponentInputBinding } from '@angular/router';
 
 import { routes } from './app.routes';
 import { initializeApp, provideFirebaseApp } from '@angular/fire/app';
@@ -21,7 +21,7 @@ import { getDatabase, provideDatabase } from '@angular/fire/database';
 export const appConfig: ApplicationConfig = {
   providers: [
     provideZoneChangeDetection({ eventCoalescing: true }),
-    provideRouter(routes),
+    provideRouter(routes,withComponentInputBinding()),
     provideFirebaseApp(() =>
       initializeApp({
         apiKey: 'AIzaSyBmj0OCb24e7stqrxqldcoodGnIFZkP-1M',

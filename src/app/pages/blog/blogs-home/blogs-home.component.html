@@ -1,0 +1,44 @@
+<div class="py-4">
+    <header class="bg-white">
+        <div class="mx-auto max-w-screen-xl pt-2 pb-6">
+            <div class="flex  items-center gap-4 ">
+                <div>
+                    <h1 class="text-2xl font-bold text-gray-900 sm:text-3xl">The Web Developer's Workshop</h1>
+                    <p class="mt-1.5 text-sm  text-gray-500">
+                        Welcome to the Web Developer's Workshop ! I'm <span
+                            class="text-[#6941C6] font-medium text-base cursor-pointer">Sumanth Nagireddi</span>, Let's
+                        explore the world of web development together as I share my experiences through various blogs
+                        and topics. </p>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="pb-4">
+        <div class="flex justify-between items-center">
+            <h2 class="font-medium text-lg">Recent blog posts</h2>
+            <div class="flexgap-4">
+                <button
+                    class="inline-flex items-center justify-center rounded-lg bg-[#6941C6] px-4 py-1.5 font-medium text-gray-50 transition-colors duration-200 ">Create
+                    Post</button>
+            </div>
+        </div>
+        <div class="grid grid-cols-3 gap-6 my-4">
+            <ng-container *ngFor="let blog of blogs; let i = index">
+                <div *ngIf="i === 0" class="col-span-2">
+                    <app-blog-card [data]="blog"></app-blog-card>
+                </div>
+                <div *ngIf="i === 1" class="col-span-1">
+                    <app-blog-card [data]="blog"></app-blog-card>
+                </div>
+            </ng-container>
+        </div>
+    </div>
+</div>
+<h2 class="font-medium text-lg">All blog posts</h2>
+<div>
+    <div class="grid grid-cols-3 h-full gap-6 my-4">
+        <div *ngFor="let item of blogs">
+            <app-blog-card [data]="item" />
+        </div>
+    </div>
+</div>
