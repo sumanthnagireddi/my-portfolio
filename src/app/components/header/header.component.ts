@@ -11,7 +11,7 @@ export class HeaderComponent {
 
   openMenu:boolean=false
   downloadPdf(): void {
-    const pdfUrl = '/assets/resume.pdf'; // Update with the actual path
+    const pdfUrl = '/assets/Sumanth_s_Resume.pdf'; // Update with the actual path
     this.downloadFile(pdfUrl, 'sumanth_resume.pdf');
   }
   downloadFile(fileUrl: string, fileName: string): void {
