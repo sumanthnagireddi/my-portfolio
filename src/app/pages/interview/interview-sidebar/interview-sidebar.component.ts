@@ -1,5 +1,5 @@
 import { NgFor, NgIf } from '@angular/common';
-import { Component, inject, input } from '@angular/core';
+import { Component, EventEmitter, inject, input, Output } from '@angular/core';
 import { PortfolioService } from '../../../services/portfolio.service';
 import { Router } from '@angular/router';
 
@@ -12,12 +12,14 @@ import { Router } from '@angular/router';
 })
 export class InterviewSidebarComponent {
   questions: any = input('questions');
+  @Output()closeMenu=new EventEmitter();
   constructor(
     private portfolioService: PortfolioService,
     private router: Router
   ) {}
 
   ngOnInit() {}
+  
   navigateToQuestion(question: any) {
     this.router.navigate(['/interview-questions-answers', question]);
   }
