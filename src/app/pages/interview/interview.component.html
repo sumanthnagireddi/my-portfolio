@@ -1,1 +1,6 @@
-<p>interview works!</p>
+<div class="flex w-full h-full">
+    <app-interview-sidebar [questions]="courses"/>
+    <div class="flex-1">
+        <router-outlet/>
+    </div>
+</div>
