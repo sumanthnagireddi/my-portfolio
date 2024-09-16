@@ -1,6 +1,7 @@
 <div class="p-4 max-h-[78vh] overflow-y-auto">
+    <markdown class="prose block w-full" src="assets/questions.md"></markdown>
     <!-- <p class="py-4 text-2xl px-2 text-purple-600 font-medium lg:flex justify-between items-center">{{questions?.name}} Interview Questions<span>{{questions?.questions?.length}} Questions</span></p> -->
-    <details *ngFor="let item of questions?.questions;let i=index" class="group-open  my-2 card border border-gray-100 rounded-lg [&_summary::-webkit-details-marker]:hidden" open>
+    <!-- <details *ngFor="let item of questions?.questions;let i=index" class="group-open  my-2 card border border-gray-100 rounded-lg [&_summary::-webkit-details-marker]:hidden" open>
         <summary
             class="flex cursor-pointer items-center justify-between px-4 py-4 text-gray-500">
             <span class="text-sm font-medium">{{i+1}} . {{item.question}}</span>
@@ -22,5 +23,5 @@
                 </li>
             </ng-container>
         </ul>
-    </details>
+    </details> -->
 </div>
