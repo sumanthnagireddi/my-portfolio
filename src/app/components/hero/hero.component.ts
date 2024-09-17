@@ -22,6 +22,7 @@ export class HeroComponent {
     const yearsExperience = Math.floor(daysDifference / 365);
     const monthsExperience = Math.floor((daysDifference % 365) / 30);
 
-    return yearsExperience + (monthsExperience / 12);
+    const totalExperience= yearsExperience + (monthsExperience / 12);
+    return parseFloat(totalExperience.toFixed(2))
   }
 }
