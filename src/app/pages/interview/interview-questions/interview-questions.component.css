@@ -1,3 +1,11 @@
-p{
-    margin: 0 !important;
-}
+markdown{
+    display: block;
+    height: 100%;
+    width: 100%;
+    
+  }
+
+  code{
+    width: 200px !important;
+
+  }
