@@ -1,10 +1,11 @@
 import { Component, effect, inject, input } from '@angular/core';
 import { PortfolioService } from '../../../services/portfolio.service';
 import { NgFor } from '@angular/common';
+import { ExperienceComponent } from "../../../components/experience/experience.component";
 @Component({
   selector: 'app-interview-questions',
   standalone: true,
-  imports: [NgFor],
+  imports: [NgFor, ExperienceComponent],
   templateUrl: './interview-questions.component.html',
   styleUrl: './interview-questions.component.css',
 })
@@ -26,6 +27,6 @@ export class InterviewQuestionsComponent {
     )
   }
   ngOnInit() {
-   
+
   }
 }
