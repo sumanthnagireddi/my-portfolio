@@ -12,7 +12,10 @@ export class ExperienceComponent {
   experiences:any=[]
   ngOnInit(){
     this.experienceService.getExperiences().subscribe(data=>{
-      this.experiences = data
+      this.experiences = this.sortExperiencesByOrder(data)
     })
+  }
+  sortExperiencesByOrder(data:any) {
+    return data.sort((a:any, b:any) => b.order - a.order);
   }
 }
