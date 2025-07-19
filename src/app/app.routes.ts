@@ -18,7 +18,7 @@ export const routes: Routes = [
   //     { path: ':course', component: InterviewQuestionsComponent },
   //   ],
   // },
-  { path: 'resources', component: InterviewQuestionsComponent },
+  { path: 'resources', component: InterviewComponent },
   {
     path: 'blog',
     component: BlogComponent,
