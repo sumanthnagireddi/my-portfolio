@@ -11,14 +11,14 @@ import { InterviewQuestionsComponent } from './pages/interview/interview-questio
 export const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'work', component: WorkComponent },
-  {
-    path: 'interview-questions-answers',
-    component: InterviewComponent,
-    children: [
-      { path: ':course', component: InterviewQuestionsComponent },
-    ],
-  },
-  { path: 'resources', component: ResourcesComponent },
+  // {
+  //   path: 'interview-questions-answers',
+  //   component: InterviewComponent,
+  //   children: [
+  //     { path: ':course', component: InterviewQuestionsComponent },
+  //   ],
+  // },
+  { path: 'resources', component: InterviewQuestionsComponent },
   {
     path: 'blog',
     component: BlogComponent,
