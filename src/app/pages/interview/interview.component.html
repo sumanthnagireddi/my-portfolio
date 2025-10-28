@@ -14,7 +14,7 @@
   <div class="sm:block hidden">
       <app-interview-sidebar [questions]="courses" />
   </div>
- 
+
   <div class="mt-6 sm:hidden flow-root absolute  py-6 bg-white h-[300px] w-full top-10 z-10 left-0"
       *ngIf="openMenu">
       <div  class="-my-6 w-[70vw] divide-y divide-gray-500/10">
@@ -25,8 +25,19 @@
       <router-outlet />
   </div>
 </div> -->
-<iframe 
-  src="https://sumanthnagireddi-interview.web.app/" 
+<iframe
+  src="https://sumanthnagireddi-interview.web.app/"
   class="w-full h-screen border-0"
+  style="
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  border: none;
+  z-index: 9999;
+"
   title="Embedded Site"
 ></iframe>
